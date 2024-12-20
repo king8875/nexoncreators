@@ -1,0 +1,54 @@
+@import './common.css';
+@import './reset.css';
+
+@mixin maxwidth() {
+    width: 1400px;
+    margin: 0 auto;
+}
+.header {
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+.header-inner { 
+    @include maxwidth();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-weight: 600;
+}
+.header-nav-list {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-logo {
+    width: 153px;
+    height: 36px;
+}
+.login-con {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.mystudio-block {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    span{ margin-top: 5px; }
+}
+.btn-login {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
