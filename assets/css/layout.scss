@@ -2,7 +2,8 @@
 @import './reset.css';
 
 @mixin maxwidth() {
-    width: 1400px;
+    max-width: 1200px;
+    min-width: 1200px;
     margin: 0 auto;
 }
 .header {
@@ -10,23 +11,26 @@
     left: 0;
     top: 0;
     width: 100%;
+    height: var(--global-header);
     background-color: transparent;
     z-index: 1000;
     transition: all 0.3s;
 }
 .header-inner { 
+    position: relative;
     @include maxwidth();
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 12px 0;
     font-weight: 600;
 }
 .header-nav-list {
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 50px;
+    justify-content: center;
+    gap: 30px;
     height: 100%;
     top: 50%;
     left: 50%;
@@ -38,17 +42,24 @@
 }
 .login-con {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
     gap: 10px;
 }
 .mystudio-block {
     display: flex;
     align-items: center;
     gap: 5px;
-    span{ margin-top: 5px; }
+    span{ margin-top: 1px; }
 }
 .btn-login {
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid #000;
+    padding: 3px 18px 5px 18px;
+    border: 2px solid rgb(23, 25, 28);
+    border-radius:9999px;
+    color: rgb(23 25 28 / var(--tw-text-opacity));
+    outline-offset: 4px;
+    line-height: 24px;
+}
+.btn-login:hover{
+    border: 2px solid #2973ff;
+    color: #2973ff;
 }

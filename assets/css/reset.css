@@ -1,3 +1,19 @@
+:root{
+    --global-screen-width: 1280px;
+    --global-mobile-width: 360px;
+    --global-content-width: 1200px;
+    --global-content-padding-x: 20px;
+    --global-content-tablet-padding-x: 28px;
+    --global-content-pc-padding-x: 40px;
+    --global-header: 68px;
+    --global-footer: 80px;
+    --global-footer-margin-top: 120px;
+    --global-mobile-header: 60px;
+    --global-mobile-footer: 148px;
+    --global-mobile-footer-margin-top: 148px;
+    --global-mobile-jppc-footer: 168px;
+    --global-mobile-jppc-footer-margin-top: 168px;
+}
 *{
     padding: 0;
     margin: 0;
@@ -5,15 +21,20 @@
     font: inherit;
 }
 *, ::after, ::before{ box-sizing: border-box; }
-html,body{ width: 100%; height: 100%; }
+html,body{ 
+    width: 100%; 
+    height: 100%;
+    font-family: Noto Sans KR,Noto Sans JP,Noto Sans TC,sans-serif;
+}
 body{
     box-sizing: border-box;
     line-height: 1;
     letter-spacing: -.35px;
     font-size: 16px;
+    overflow-x: hidden;
 }
 a{text-decoration: none;}
-ul{list-style: none;}
+ul{ list-style: none; }
 fieldset,input,button,select{ 
     border: none; 
     background: none;

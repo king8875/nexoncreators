@@ -71,7 +71,7 @@ $(document).ready(function() {
 
         };
     });
-})
+});
 
 // 현재 날짜 출력 
 var today = new Date();
@@ -114,9 +114,6 @@ function countingType1(num) {
 
 window.onload = function() {
     countingType1(2116);
-}
-
- 
 
 
     // 크리에이터즈 캠페인 이미지
@@ -158,23 +155,12 @@ window.onload = function() {
     });
 
 
-    const tabItem = document.querySelectorAll('.tab_item');
-    const tabContent = document.querySelectorAll('.tab_content');
+    const tabItem = $('.sec05_tab_item');
+    const tabContent = $('.tab_content');
 
-    tabItem.forEach((item, index) => {
-        item.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            tabContent.forEach((content) => {
-                content.classList.remove('active');
-            });
-            tabItem.forEach((content) => {
-                content.classList.remove('active');
-            });
-
-            tabItem[index].classList.add('active');
-            tabContent[index].classList.add('active');
-        });
+    tabItem.on('click',function(){
+        tabItem.removeClass('active');
+        $(this).addClass('active');
     });
 
 
@@ -192,3 +178,4 @@ window.onload = function() {
         },
 
     });
+}
