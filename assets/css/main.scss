@@ -6,15 +6,11 @@ $energy-color : rgb(255 230 0);
 $white-background-color : rgb(255, 255, 255);
 $gray-text-color : rgb(116, 122, 134);
 $main-blue-color : rgb(41, 115, 255);
-
-
 .container{
+    position: relative;
     min-width: var(----global-screen-width);
 }
 body { background-color: $main-background-color; }
-
-
-
 
 @mixin button() {
     width: 100px;
@@ -40,9 +36,7 @@ body { background-color: $main-background-color; }
     width: 1200px;
     margin: 0 auto;
 }
-@mixin btnhover-color() {
-    color: $main-blue-color;
-}
+@mixin btnhover-color() { color: $main-blue-color; }
 @mixin swiper-btn() {
     display: flex;
     justify-content: center;
@@ -56,9 +50,7 @@ body { background-color: $main-background-color; }
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     box-shadow: 0px 6px 8px #050E381F;
     border: none;
-    img {
-        transform: scale(0.5);
-    }
+    img { transform: scale(0.5); }
 }
 @mixin sec02_btn {
     position: absolute;
@@ -84,21 +76,9 @@ body { background-color: $main-background-color; }
     border-top-left-radius: .75rem;
     border-bottom-left-radius: .75rem;
 }
-.min-w-full {
-    min-width: 100%;
-}
-.max-w-1480px {
-    max-width: 1480px;
-}
-.relative {
-    position: relative;
-}
-.absolute {
-    position: absolute;
-}
-section {
-    @include full-content-width();
-}
+.min-w-full { min-width: 100%; }
+.max-w-1480px { max-width: 1480px; }
+section { @include full-content-width(); }
 
 // section top style //
 .section_top_text {
@@ -130,25 +110,25 @@ section {
 }
 /////////////////////
 
-
-
 .sticky_con {
     position: sticky;
-    transform: translateX(30px);
     width: fit-content;
     z-index: 1000;
-    top: 68px;
+    top: 10%;
     left: calc(50% + 1200px / 2 + 60px);
-    background-color: #00C3A1;
-
 }
 
 .sticky_main {
-    background-image: url(../src/img/nexon_img/img_floating_BN.png);
+    position: relative;
+    background-image: url(../img/nexon_img/img_floating_BN.png);
     width: 128px;
     height: 10rem;
 
     p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         color: $white-background-color;
         letter-spacing: -.26px;
         line-height: 1rem;
@@ -156,10 +136,14 @@ section {
         font-size: 12px;
         text-align: center;
         white-space: break-spaces;
-        margin: 0;
+        width: 100%;
     }
 
     span {
+        position: absolute;
+        top: 95px;
+        left: 50%;
+        transform: translate(-50%, 0);
         color: rgb(109, 252, 86);
         letter-spacing: -.3px;
         font-weight: 600;
@@ -214,9 +198,7 @@ section {
         font-weight: 400;
         font-size: 14px;
         line-height: 22px;
-        span {
-            margin-left: 5px;
-        }
+        span { margin-left: 5px; }
     }
     .first-date_con {
         display: flex;
@@ -232,15 +214,12 @@ section {
             color: $white-background-color;
             letter-spacing: -.4px;
             font-weight: 400;
-        
         }
     }
 }
 
 /////banner-sec/////////
-.banner-sec{
-    width: 1200px;
-}
+.banner-sec{ width: 1200px; }
 .banner-con {
     position: relative;
     width: 100%;
@@ -382,20 +361,17 @@ section {
             display: flex;
             list-style-type: none;
             margin-top: 5px;
-
             img {
                 object-fit: contain;
                 width: 1.25rem;
                 height: 1.5rem;
                 max-width: 100%;
             }
-
             span {
                 color: rgb(11, 118, 255);
                 margin-left: 5px;
                 font-size: 14px;
             }
-
         }
     }
     .game_ul::-webkit-scrollbar{
@@ -407,7 +383,6 @@ section {
         background-color: #E8EBF6; 
         border-radius: 9999px;
     }
-    
     .sec02_footer {
         display: flex;
         justify-content: space-between;
@@ -417,14 +392,12 @@ section {
         .sec02_footer_left {
             display: flex;
             gap: 5px;
-
             div:nth-child(2) {
                 color: rgb(41 115 255);
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 21px;
             }
-
             .span_01 {
                 letter-spacing: -.3px;
                 font-weight: 400;
@@ -460,16 +433,12 @@ section {
     position: relative;
     margin: 100px auto;
 }
-.section03-inner{
-    width: 100%;
-}
+.section03-inner{ width: 100%; }
 .sec03_text {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-
 .sec03_container {
     position: relative;
     gap: 20px;
@@ -489,7 +458,6 @@ section {
     width: 590px;
     height: 208px;
 }
-
 .sec03_img02 {
     background-image:
         url("https://creators-cdn.nexon.com/creators-support/assets/home/game/community2/game_2009_1711501430064.png");
@@ -498,8 +466,6 @@ section {
     width: 590px;
     height: 208px;
 }
-
-
 .hit_link {
     display: flex;
     flex-direction: column;
@@ -510,12 +476,10 @@ section {
     height: 100%;
     padding-left: 50px;
     color: #eee;
-
     .hit_tit{
         font-weight: 500;
         font-size: 24px;
     }
-
     button {
         display: flex;
         align-items: center;
@@ -528,11 +492,8 @@ section {
         font-size: 12px;
     }
 }
-
-
 .class_p {
     margin-top: 10px;
-
     span {
         color: $gray-text-color;
         letter-spacing: -.3px;
@@ -542,10 +503,7 @@ section {
     }
 }
 
-
-
 // section04 
-.section04{ }
 .sec04_main_container { 
     display: flex; 
     align-items: flex-end;
@@ -558,7 +516,6 @@ section {
     height: 415px;
     flex: 1;
 }
-
 .sec_04_text01 {
     text-align: center;
     letter-spacing: -.5px;
@@ -567,8 +524,6 @@ section {
     line-height: 34px;
     color: #fff;
 }
-
-
 .sec04_left {
     display: flex;
     flex-direction: column;
@@ -618,10 +573,8 @@ section {
         line-height: 36px;
     }
 }
-
 .sec04_right_bottom {
     position: relative;
-
     .sec04_bottom_item_con {
         position: relative;
         display: flex;
@@ -637,7 +590,6 @@ section {
         overflow: hidden;
     }
 }
-
 .shadow_con {
     position: absolute;
     top: 0;
@@ -657,7 +609,6 @@ section {
         padding: 10px;
         border-radius: 10px;
     }
-
     .hot-camp {
         position: absolute;
         right: 10px;
@@ -665,7 +616,6 @@ section {
         height: 25px;
     }
 }
-
 .sec04_bottom_text {
     position: absolute;
     top: 0;bottom: 0;left: 0;right: 0;
@@ -714,9 +664,7 @@ section {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         .text04_01 {
-
             img {
                 width: 1.25rem;
                 height: 1.25rem;
@@ -744,20 +692,16 @@ section {
         }
     }
 }
-
-.sec04_item01,
-.sec04_item02,
-.sec04_item03 {
+.sec04_item01
+{
     position: relative;
     overflow: hidden;
     transition: all 1s;
 }
 
-.sec04_main_img_01,
-.sec04_main_img_02,
-.sec04_main_img_03 {
+.sec04_main_img_01
+{
     overflow: hidden;
-
     img {
         width: 100%;
         height: 100%;
@@ -791,30 +735,24 @@ section {
 
 .sec05_mc {
     position: relative;
-
     .sec05_tab_list{
         display: flex;
         gap: 10px;
         margin: 30px 0;
     }
-   
     .sec05_tab_item.active{
         border-radius: 9999px;
         background: rgb(41, 115, 255);
         color: #fff;
     }
     .sec05_a {
-
         span {
             color: rgb(116 122 134);
-            // color: rgb(255, 255, 255);
             letter-spacing: -.35px;
             font-weight: 500;
             font-size: 16px;
             line-height: 24px;
-
         }
-
     }
     .tab_item_link{
         display: block;
@@ -828,10 +766,7 @@ section {
         }
     }
     .tab_content { display: none; }
-
     .tab_content.active { display: block; }
-    .tab_content_wrapper{ }
-    .li_item_link{ }
     .tab_content_list {
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -893,25 +828,18 @@ section {
         }
         button { #heart { color: rgb(210, 214, 224); } }
     }
-
-  
-
     .tab_content_item {
         position: relative;
         width: 590px;
         height: 364px;
-
         a {
             width: 100%;
             height: 100%;
             display: flex;
         }
-
     }
-
     .li_item_03_left_con {
         position: relative;
-
         .left_img_con {
             background-color: $white-background-color;
             @include topL-bottomL-radius();
@@ -1023,7 +951,6 @@ section {
 
 // section06
 .section06{ position: relative; }
-.sec06_inner{ }
 .sec06_con {
     display: flex;
     justify-content: space-between;
@@ -1100,12 +1027,10 @@ section {
         margin-top: -4px;
     }
 }
-
 .sec06_first_btn {
     background-color: transparent;
     background-image: none;
     border: none;
-
     p {
         color: $white-background-color;
         letter-spacing: -.3px;
@@ -1114,9 +1039,7 @@ section {
         line-height: 22px;
         @include textwrap();
     }
-
 }
-
 .sec06_second_main_con {
     display: flex;
     justify-content: center;
@@ -1125,14 +1048,11 @@ section {
     margin-top: 127px;
     margin-left: 1.25rem;
     position: absolute;
-
 }
-
 .crown2 {
     width: 1.5rem;
     height: 17px;
 }
-
 .second_img {
     border: 2px solid rgb(235, 235, 235);
     border-radius: 9999px;
@@ -1142,12 +1062,10 @@ section {
     margin-top: -3px;
 
 }
-
 .sec06_second_btn {
     background-color: transparent;
     background-image: none;
     border: none;
-
     p {
         color: $white-background-color;
         letter-spacing: -.3px;
@@ -1157,7 +1075,6 @@ section {
         @include textwrap();
     }
 }
-
 .sec06_third_main_con {
     display: flex;
     justify-content: center;
@@ -1167,13 +1084,10 @@ section {
     margin-left: 258px;
     position: absolute;
 }
-
 .crown3 {
     width: 1.5rem;
     height: 17px;
-
 }
-
 .third_img {
     border: 2px solid rgb(255, 200, 168);
     border-radius: 9999px;
@@ -1181,14 +1095,11 @@ section {
     width: 60px;
     height: 60px;
     margin-top: -3px;
-
 }
-
 .sec06_third_btn {
     background-color: transparent;
     background-image: none;
     border: none;
-
     p {
         color: $white-background-color;
         letter-spacing: -.3px;
@@ -1199,7 +1110,6 @@ section {
         width: 100px;
     }
 }
-
 .sec06_bottom_first {
     display: flex;
     align-items: center;
@@ -1207,11 +1117,8 @@ section {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
     color: $white-background-color;
-
-
     .first_profile {
         display: flex;
-
         img {
             width: 28px;
             height: 28px;
@@ -1219,15 +1126,12 @@ section {
             overflow: hidden;
             border-radius: 9999px;
         }
-
-
         button {
             width: 101px;
             margin-right: 1rem;
             border: none;
             background-image: none;
             background-color: transparent;
-
             span {
                 letter-spacing: -.3px;
                 font-weight: 500;
@@ -1239,7 +1143,6 @@ section {
             }
         }
     }
-
     .rank_num {
         width: 22px;
         letter-spacing: -.35px;
@@ -1247,11 +1150,9 @@ section {
         font-size: 16px;
         line-height: 24px;
     }
-
     .game_name {
         width: 105px;
         margin-right: .5rem;
-
         span {
             letter-spacing: -.3px;
             font-weight: 400;
@@ -1259,9 +1160,7 @@ section {
             line-height: 22px;
         }
     }
-
 }
-
 .person_num {
     display: flex;
     justify-content: end;
@@ -1270,35 +1169,22 @@ section {
     font-size: 14px;
     line-height: 21px;
     flex: 1 1 0%;
-
     span:nth-child(2) {
         opacity: .7;
         margin-left: 1px;
     }
-
 }
-
 .sec06_br {
     opacity: .2;
     border-color: rgb(210, 214, 224);
     margin-left: 1.25rem;
     margin-right: 1.25rem;
 }
-
-
-
-
-
-
-
 .sec06_item02 {
     display: flex;
     flex: 1 1 0%;
     flex-direction: column;
-
 }
-
-
 .sec06_first_rank_con {
     color: $white-background-color;
     padding-left: 21px;
@@ -1311,7 +1197,6 @@ section {
     width: 100%;
     height: 122px;
     position: relative;
-
     img {
         border-radius: 9999px;
         overflow: hidden;
@@ -1319,7 +1204,6 @@ section {
         height: 56px;
         position: relative;
     }
-
     button {
         flex-direction: column;
         width: fit-content;
@@ -1331,14 +1215,12 @@ section {
         border: none;
         color: $white-background-color;
 
-
         span {
             letter-spacing: -.35px;
             font-weight: 700;
             font-size: 16px;
             line-height: 24px;
         }
-
         .sub_game {
             font-size: 14px;
             line-height: 22px;
@@ -1346,7 +1228,6 @@ section {
             font-weight: 400;
             opacity: .7;
         }
-
     }
 }
 
@@ -1358,7 +1239,6 @@ section {
     height: 122px;
     background-image: url(../img/nexon_img/rankingbg.svg);
 }
-
 .rank_num01 {
     font-weight: 600;
     font-size: 16px;
@@ -1435,7 +1315,6 @@ section {
 
 // section07
 .sec07_con {
-    // @include full-content-width();
     display: flex;
     align-items: center;
     justify-content: center;

@@ -114,8 +114,6 @@ function countingType1(num) {
 
 window.onload = function() {
     countingType1(2116);
-
-
     // 크리에이터즈 캠페인 이미지
     $('.sec04_item01').mouseover(function () {
         $(this).find('img').css('transform','scale(1.1)');
@@ -124,22 +122,17 @@ window.onload = function() {
         $(this).find('img').css('transform','scale(1)');
     });
 
- 
-
     // 캠페인 둘러보기 이미지 
     $('.li_item_01').mouseover(function() {
         $('#li_item_01_img').css('transform', 'scale(1.1)');
         $('#li_item_01_img').css('transition-duration', '.15s');
-
     });
     $('.li_item_01').mouseleave(function() {
         $('#li_item_01_img').css('transform', 'scale(1)');
     });
-
     $('.li_item_03').mouseover(function() {
         $('#li_item_03_img').css('transform', 'scale(1.1)');
         $('#li_item_03_img').css('transition-duration', '.15s');
-
     });
     $('.li_item_03').mouseleave(function() {
         $('#li_item_03_img').css('transform', 'scale(1)');
@@ -148,13 +141,10 @@ window.onload = function() {
     $('.li_item_04').mouseover(function() {
         $('#li_item_04_img').css('transform', 'scale(1.1)');
         $('#li_item_04_img').css('transition-duration', '.15s');
-
     });
     $('.li_item_04').mouseleave(function() {
         $('#li_item_04_img').css('transform', 'scale(1)');
     });
-
-
     const tabItem = $('.sec05_tab_item');
     const tabContent = $('.tab_content');
 
@@ -162,12 +152,6 @@ window.onload = function() {
         tabItem.removeClass('active');
         $(this).addClass('active');
     });
-
-
-
-
-
-
     const Sec02Swiper = new Swiper('.sec02-swiper.swiper',{
         loop:true,
         spaceBetween:10,
@@ -176,6 +160,5 @@ window.onload = function() {
             nextEl: '.sec02_next',
             prevEl: '.sec02_pre',
         },
-
     });
 }

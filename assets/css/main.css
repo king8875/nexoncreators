@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   min-width: var(----global-screen-width);
 }
 
@@ -12,14 +13,6 @@ body {
 
 .max-w-1480px {
   max-width: 1480px;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
 }
 
 section {
@@ -57,21 +50,24 @@ section {
 
 .sticky_con {
   position: sticky;
-  transform: translateX(30px);
   width: -moz-fit-content;
   width: fit-content;
   z-index: 1000;
-  top: 68px;
+  top: 10%;
   left: calc(50% + 600px + 60px);
-  background-color: #00C3A1;
 }
 
 .sticky_main {
-  background-image: url(../src/img/nexon_img/img_floating_BN.png);
+  position: relative;
+  background-image: url(../img/nexon_img/img_floating_BN.png);
   width: 128px;
   height: 10rem;
 }
 .sticky_main p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: rgb(255, 255, 255);
   letter-spacing: -0.26px;
   line-height: 1rem;
@@ -79,9 +75,13 @@ section {
   font-size: 12px;
   text-align: center;
   white-space: break-spaces;
-  margin: 0;
+  width: 100%;
 }
 .sticky_main span {
+  position: absolute;
+  top: 95px;
+  left: 50%;
+  transform: translate(-50%, 0);
   color: rgb(109, 252, 86);
   letter-spacing: -0.3px;
   font-weight: 600;
@@ -733,22 +733,16 @@ section {
   font-size: 16px;
 }
 
-.sec04_item01,
-.sec04_item02,
-.sec04_item03 {
+.sec04_item01 {
   position: relative;
   overflow: hidden;
   transition: all 1s;
 }
 
-.sec04_main_img_01,
-.sec04_main_img_02,
-.sec04_main_img_03 {
+.sec04_main_img_01 {
   overflow: hidden;
 }
-.sec04_main_img_01 img,
-.sec04_main_img_02 img,
-.sec04_main_img_03 img {
+.sec04_main_img_01 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
